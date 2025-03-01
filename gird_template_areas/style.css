@@ -29,17 +29,48 @@ body {
 }
 
 
+.header {
+    grid-area: header;
+    /* height:3rem; */
+}
+
+.navmenu {
+    grid-area: navmenu;
+    /* height: worked by ===grid-template-rows */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    /* height: worked by ===grid-template-rows */
+}
+
+.maincontent {
+    grid-area: maincontent;
+    /* height: worked by ===grid-template-rows */
+}
+
+.footer {
+    grid-area: footer;
+    /* height: worked by ===grid-template-rows */
+}
+
 .grid-container {
     display: grid;
+    grid-area: grid-template-areas;
+
+    /* grid-template-columns: (worked by gird-template-areas); */
+    grid-template-rows: 50px 30px 300px 70px;
+
     width: 90%;
     height: 90%;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'header header header header' 'navmenu navmenu navmenu navmenu' 'sidebar maincontent maincontent maincontent' 'footer footer footer footer';
     margin: 2px;
     padding: 10px;
     border: 1px solid blueviolet;
     border-radius: 5px;
     background: white;
 }
+
 
 h2 {
     color: aqua;
@@ -52,29 +83,4 @@ h2 {
     padding: 2px;
     border: 1.5px solid rgb(15, 0, 217);
     border-radius: 3px;
-
-}
-.box.box1 {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    height: 40px;
-}
-.box.box2 {
-    grid-row: 1/4;
-    grid-column: 3/4;
-}
-.box.box3 {
-    grid-row: 2/5;
-}
-.box.box4 {
-    height: 40px
-}
-
-.box.box5 {
-    height: 20px
-}
-.box.box6 {
-    grid-column: 2/4;
-    grid-row: 4/5;
-    height: 60px;
 }
