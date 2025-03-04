@@ -1,3 +1,5 @@
+
+
 const student = {
     fullName: "Bikash Adhikari",
     marks: 98.4,
@@ -11,6 +13,17 @@ console.log(student.fullName)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 //------------------------setting prototype-------------------------------------------
 //------------------------------------------------------------------------------------
 const employee = {
@@ -19,7 +32,6 @@ const employee = {
     },
 
 };
-
 
 
 
