@@ -1,0 +1,34 @@
+.dark {
+    background: black;
+    color: white;
+}
+
+.light {
+    background: aliceblue;
+    color: black;
+}
+
+p {
+    font-size: large;
+    font-weight: 800;
+}
+
+.goto {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+i {
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 40px;
+    opacity: 0;
+}
+
+.iconOpen {
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 40px;
+    opacity: 1;
+}
