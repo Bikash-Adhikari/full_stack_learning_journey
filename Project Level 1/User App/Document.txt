@@ -1,0 +1,46 @@
+
+Step:1 => create html and js file
+Step:2 => go to bootstrap and link CDN in html
+step:3 => search input in Bootstrap site and copy element and paste inside the container in html
+Step:4 = create display div => create table => Create thead and tbody
+stpe:5 = Create thead>>tr && tbody >>tr
+step:6 = Link font-awesome, create style.css and add Google-font, place edit and delete btn on table-row [use bootstrap for style]
+
+step:7 = link JavaScript file in html file
+step:8 = get addUser button, get username text field in JS
+step:9 = click event on addUser button
+step:10: Create 4 function's fields => saveInfo, displayInfo, editInfo, deleteInfo 
+
+ 
+step:11 = create userArray to get data stored => store as an Object
+step:12 = Go to step9 field and add userArray.push() method
+
+step:13 = Work on saveInfo function >>> localStorage.setItem() to save data on local storage
+step:14 = to save userArray's obj-value as string >>> in step13's value
+step:15 = to save data in local storage permanently ------[get previously added data >> add new data >> save total data]
+step:16 = convert obj-string into object[key:value] format >>> and again place in to userArray
+
+step:17 = Work on displayInfo function to display stored data from localStorage [display userArray]
+step:18 = display each item as html: set html table-row element
+step:19 = getElementById of tbody form index.html
+step:20 = each table(statement variable) will be placed on recordsDisplay(ie. tdody in index.html)
+step:21 = call the displayInfo
+step:22 = call the displayInfo inside the step9 block
+step:23 = make the table-row dynamic [update each item as entered in text area]
+
+step:24 = to remove/edit item >> got to delete and edit 'icon-links' in app.js introduce event'onClick' on each
+step:25 = work on deleteInfo function [remove items from userArray] 
+
+
+step:26 = define edit_id variable
+step:27 = work on editInfo function 
+step:28 = get editing-text on userNameText Field
+step:29 = Change button text while editing >>> button text 
+step:30 = define new variable for button text after edit
+step:31 = Re-place the button text as it was, button text after edit
+
+step:32 = Prevent edited text to be saved as new item
+step:33 = first delete the clicked item then add new item
+step:34 = to prevent re-update(without click on edit icon) on previously edited item
+
+step:35 = some changes in style properties
