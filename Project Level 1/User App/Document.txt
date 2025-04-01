@@ -1,7 +1,7 @@
 
 Step:1 => create html and js file
 Step:2 => go to bootstrap and link CDN in html
-step:3 => search input in Bootstrap site and copy element and paste inside the container in html
+step:3 => search input in Bootstrap site then copy element and paste inside the container in html
 Step:4 = create display div => create table => Create thead and tbody
 stpe:5 = Create thead>>tr && tbody >>tr
 step:6 = Link font-awesome, create style.css and add Google-font, place edit and delete btn on table-row [use bootstrap for style]
@@ -9,16 +9,16 @@ step:6 = Link font-awesome, create style.css and add Google-font, place edit and
 step:7 = link JavaScript file in html file
 step:8 = get addUser button, get username text field in JS
 step:9 = click event on addUser button
-step:10: Create 4 function's fields => saveInfo, displayInfo, editInfo, deleteInfo 
+step:10: Create 4 function's fields => saveInfo, displayInfo, editInfo, deleteInfo [CRUD]
 
- 
+
 step:11 = create userArray to get data stored => store as an Object
 step:12 = Go to step9 field and add userArray.push() method
 
 step:13 = Work on saveInfo function >>> localStorage.setItem() to save data on local storage
 step:14 = to save userArray's obj-value as string >>> in step13's value
 step:15 = to save data in local storage permanently ------[get previously added data >> add new data >> save total data]
-step:16 = convert obj-string into object[key:value] format >>> and again place in to userArray
+step:16 = convert obj-string into object[key:value] format >>> and again re-store into userArray
 
 step:17 = Work on displayInfo function to display stored data from localStorage [display userArray]
 step:18 = display each item as html: set html table-row element
