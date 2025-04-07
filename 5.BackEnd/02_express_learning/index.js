@@ -18,6 +18,7 @@ const port = 3000;
 
 app.use(express.json());  // middleware(for JSON parsing) that get data from Front-End
 
+
 //Design a simple application that stores my data in an array:
 let appleData = [];
 let nextId = 1;
@@ -67,7 +68,6 @@ app.put('/apples/:id', (req, res) => {
 });
 
 
-
 //delete apple-product
 app.delete('/apples/:id', (req, res) => {
     const index = appleData.findIndex(a => a.id === parseInt(req.params.id));
@@ -78,8 +78,6 @@ app.delete('/apples/:id', (req, res) => {
     appleData.splice(index, 1)
     res.status(204).send("Deleted");
 });
-
-
 
 
 

@@ -1,0 +1,6 @@
+//just like git ignore//
+
+vscode
+node_modules
+dist
+.env
