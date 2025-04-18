@@ -20,10 +20,11 @@ app.use(express.static('public')) //serve static files
 
 
 
-//import routes
+
+//import routes ---------------------------------------------------------------------------------------
 import heathcheckRouter from "./routes/healthcheck.routes.js"
 
-//create routes: As another middleware
+//create routes: As another middleware -----------------------------------------------------------------
 app.use("/api/v1/healthcheck", heathcheckRouter)
 
 
