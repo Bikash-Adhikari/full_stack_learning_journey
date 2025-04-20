@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import cookieParser from "cookie-parser";
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.use(
 app.use(express.json({ limit: '16kb' })) // limit the data
 app.use(express.urlencoded({ extended: true, limit: '16kb' })) //only parse url-encoded bodies
 app.use(express.static('public')) //serve static files
+
+app.use(cookieParser())
 
 
 

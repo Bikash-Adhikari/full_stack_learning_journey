@@ -67,7 +67,7 @@ const userSchema = new Schema(
 
 
 
-//use the hook(middleware) to encrypt the passowrd [clear-text PW is not good]
+//use the pre hook(middleware) to encrypt the passowrd [clear-text PW is not good]
 // to encrypt password => use a library ==> 'bcrypt' : https://www.npmjs.com/package/bcrypt 
 
 userSchema.pre("save", async function (next) {
@@ -78,15 +78,15 @@ userSchema.pre("save", async function (next) {
     next()
 })
 
+
 //lets compare the user-input password and database password in encrypted form
 userSchema.methods.isPasswordCorrect = async function (passowrd) {
     return await bcrypt.compare(passowrd, this.password)
 }
 
 
-//Making ensure whether you are signed up or logged in 
-//When user successfully logged in, we want to generate ACCESS TOKEN & REFRESH TOKEN
 
+//When user successfully logged in, we want to generate ACCESS TOKEN & REFRESH TOKEN
 userSchema.methods.generateAccessToken = function () {
     //short lived access Token
     return jwt.sign({
@@ -100,7 +100,7 @@ userSchema.methods.generateAccessToken = function () {
     );
 }
 
-// When user successfully logged in, we want to generate REFRESH TOKEN as same as ACCESS TOKEN
+// When user successfully logged in, we want to generate REFRESH TOKEN, same as ACCESS TOKEN
 userSchema.methods.generateRefreshToken = function () {
 
     return jwt.sign({
@@ -114,7 +114,7 @@ userSchema.methods.generateRefreshToken = function () {
 
 
 
-export const user = mongoose.model('User', userSchema);
+export const User = mongoose.model('User', userSchema);
 
 //mongoose says ==> Hey mongoose I want build a model (a new structure) in my database, that document will be called as 'User' and the schema structure to be followed is 'userSchema'
 
