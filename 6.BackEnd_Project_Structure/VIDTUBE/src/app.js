@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from "cookie-parser";
 
+
 const app = express();
 
 // use cors middleware
@@ -26,9 +27,13 @@ app.use(cookieParser())
 
 //import routes ---------------------------------------------------------------------------------------
 import heathcheckRouter from "./routes/healthcheck.routes.js"
+import userRouter from "./routes/user.routes.js"
+import { errorHandler } from './middlewares/error.middleware.js';
 
 //create routes: As another middleware -----------------------------------------------------------------
 app.use("/api/v1/healthcheck", heathcheckRouter)
+app.use("/api/v1/users", userRouter)
+app.use(errorHandler)
 
 
 
